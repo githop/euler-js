@@ -10,15 +10,12 @@ let p = [0,1,2,3,4,5,6,7,8,9];
 
 const LIMIT = 1000000;
 
-
 console.log('result:', solve(p, LIMIT));
 
 function solve(arr, limit) {
   let count = 2;
   let currentPerm = generatePermutation(arr);
-  // console.log('first', arr);
   while (count < limit) {
-    // console.log('next', currentPerm);
     currentPerm = generatePermutation(currentPerm);
     count++;
   }
